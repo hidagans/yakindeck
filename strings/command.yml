@@ -11,7 +11,7 @@
 # Commands in Every Language
 
 # Bot Commands
-PING_COMMAND : ["mping"]
+PING_COMMAND : ["ping"]
 START_COMMAND : ["mstart"]
 HELP_COMMAND : ["mhelp"]
 SETTINGS_COMMAND : ["msettings", "msetting"]
@@ -33,7 +33,7 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 
 # Tools
 QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
-SONG_COMMAND : ["msong", "mvideo"]
+SONG_COMMAND : ["song", "video"]
 LYRICS_COMMAND : ["mlyrics"]
 
 
@@ -60,7 +60,7 @@ DELSUDO_COMMAND : ["mdelsudo"]
 SUDOUSERS_COMMAND : ["sudolist"]
 
 #Broadcast 
-BROADCAST_COMMAND : ["gcast"]
+BROADCAST_COMMAND : ["mbroadcast"]
 
 #Blacklist chat
 BLACKLISTCHAT_COMMAND : ["blacklistchat"]
@@ -103,10 +103,10 @@ BLOCKED_COMMAND : ["blockedusers"]
 SPEEDTEST_COMMAND : ["speedtest"]
 
 #Voice chat commands
-ACTIVEVC_COMMAND : ["vcs"]
-ACTIVEVIDEO_COMMAND : ["vcv"]
+ACTIVEVC_COMMAND : ["os"]
+ACTIVEVIDEO_COMMAND : ["vcs"]
 
 #Gban Commands
-GBAN_COMMAND : ["mgban"]
-UNGBAN_COMMAND : ["mungban"]
-GBANNED_COMMAND : ["mgbannedusers"]
+GBAN_COMMAND : ["gban"]
+UNGBAN_COMMAND : ["ungban"]
+GBANNED_COMMAND : ["gbannedusers"]
