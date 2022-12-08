@@ -18,6 +18,7 @@ import config
 from config import adminlist, chatstats, clean, userstats
 from strings import get_command
 from YukkiMusic import app, userbot
+from config import adminlist, chatstats, clean, userstats, OWNER_ID
 from YukkiMusic.utils.database import (get_active_chats,
                                        get_authuser_names, get_client,
                                        get_particular_top,
@@ -34,11 +35,6 @@ AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
 IS_BROADCASTING = False
 cleanmode_group = 15
-
-@app.on_message(
-    filters.command(BROADCAST_COMMAND) & filters.user(OWNER_ID)
-)
-
 
 @app.on_raw_update(group=cleanmode_group)
 async def clean_mode(client, update, users, chats):
@@ -69,7 +65,9 @@ async def clean_mode(client, update, users, chats):
     await set_queries(1)
 
 
-@app.on_message(filters.command(BROADCAST_COMMAND) & SUDOERS)
+@app.on_message(
+    filters.command(BROADCAST_COMMAND) & filters.user(OWNER_ID)
+)
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
