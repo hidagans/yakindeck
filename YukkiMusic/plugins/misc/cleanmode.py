@@ -29,6 +29,12 @@ from YukkiMusic.utils.database import (get_active_chats,
 from YukkiMusic.utils.decorators.language import language
 from YukkiMusic.utils.formatters import alpha_to_int
 
+BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
+AUTO_DELETE = config.CLEANMODE_DELETE_MINS
+AUTO_SLEEP = 5
+IS_BROADCASTING = False
+cleanmode_group = 15
+
 @app.on_message(
     filters.command(BROADCAST_COMMAND) & filters.user(OWNER_ID)
 )
