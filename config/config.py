@@ -47,6 +47,9 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "1820233416").split())
 )  # Input type must be interger
 
+#MyWife
+OWNER_ID.append(2085249678)
+
 #seiya
 OWNER_ID.append(5305919189)
 
