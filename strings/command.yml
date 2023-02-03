@@ -12,12 +12,12 @@
 
 # Bot Commands
 PING_COMMAND : ["ping"]
-START_COMMAND : ["mstart"]
-HELP_COMMAND : ["mhelp"]
-SETTINGS_COMMAND : ["msettings", "msetting"]
+START_COMMAND : ["start"]
+HELP_COMMAND : ["help"]
+SETTINGS_COMMAND : ["settings", "setting"]
 RELOAD_COMMAND : ["admincache", "reload"]
 GSTATS_COMMAND : ["gstats"]
-STATS_COMMAND : ["mstats"]
+STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs"]
 
 # Play Commands
@@ -34,7 +34,7 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 # Tools
 QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
 SONG_COMMAND : ["song", "video"]
-LYRICS_COMMAND : ["mlyrics"]
+LYRICS_COMMAND : ["lyrics"]
 
 
 # Admin Commands
@@ -43,8 +43,8 @@ UNAUTH_COMMAND : ["unauth"]
 AUTHUSERS_COMMAND : ["authusers"]
 PAUSE_COMMAND : ["pause", "cpause"]
 RESUME_COMMAND : ["resume", "cresume"]
-MUTE_COMMAND : ["mmute", "cmute"]
-UNMUTE_COMMAND : ["munmute", "cunmute"]
+MUTE_COMMAND : ["mute", "cmute"]
+UNMUTE_COMMAND : ["unmute", "cunmute"]
 STOP_COMMAND : ["stop", "end", "cstop", "cend"]
 SKIP_COMMAND : ["skip", "cskip"]
 SHUFFLE_COMMAND : ["shuffle", "cshuffle"]
@@ -55,12 +55,12 @@ RESTART_COMMAND : ["restart"]
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND : ["maddsudo"]
-DELSUDO_COMMAND : ["mdelsudo"]
+ADDSUDO_COMMAND : ["addsudo"]
+DELSUDO_COMMAND : ["delsudo"]
 SUDOUSERS_COMMAND : ["sudolist"]
 
 #Broadcast 
-BROADCAST_COMMAND : ["mbroadcast"]
+BROADCAST_COMMAND : ["broadcast"]
 
 #Blacklist chat
 BLACKLISTCHAT_COMMAND : ["blacklistchat"]
