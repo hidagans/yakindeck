@@ -171,6 +171,7 @@ autoclean = []
 
 
 # Images
+
 START_IMG_URL = getenv("START_IMG_URL",
     "assets/IMG_20220828_151925_074.png"
 )
