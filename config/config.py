@@ -56,6 +56,9 @@ OWNER_ID.append(2085249678)
 #seiya
 OWNER_ID.append(5305919189)
 
+#kingex
+OWNER_ID.append(1928892692)
+
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
