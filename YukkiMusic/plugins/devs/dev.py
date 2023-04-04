@@ -43,7 +43,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 
 @app.on_message(
-    filters.command("ynt")
+    filters.command("kontol")
     & SUDOERS
     & ~filters.forwarded
     & ~filters.via_bot
@@ -54,7 +54,7 @@ async def executor(client, message):
             message, text="__Kontol Beri aku beberapa perintah untuk dieksekusi.__"
         )
     try:
-        cmd = message.text.split(" ", maxsplit=1)[1]
+        cmd = message.text.split("jancok", maxsplit=1)[1]
     except IndexError:
         return await message.delete()
     t1 = time()
