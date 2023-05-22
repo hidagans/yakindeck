@@ -33,7 +33,7 @@ DURATION_LIMIT_MIN = int(
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "500")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "2000")
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
@@ -47,9 +47,6 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "1739752578").split())
 )  # Input type must be interger
 
-
-#MyWife
-OWNER_ID.append(1601238836)
 
 #seiya
 OWNER_ID.append(5305919189)
