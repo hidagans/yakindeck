@@ -25,7 +25,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
 from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
+from YukkiMusic.misc import OWNER
 
 
 async def aexec(code, client, message):
@@ -43,18 +43,18 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 
 @app.on_message(
-    filters.command("ynt")
-    & SUDOERS
+    filters.command("eval")
+    & OWNER
     & ~filters.forwarded
     & ~filters.via_bot
 )
 async def executor(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
-            message, text="__Kontol Beri aku beberapa perintah untuk dieksekusi.__"
+            message, text="__Nigga Give me some command to execute.__"
         )
     try:
-        cmd = message.text.split("ynt", maxsplit=1)[1]
+        cmd = message.text.split(" ", maxsplit=1)[1]
     except IndexError:
         return await message.delete()
     t1 = time()
@@ -152,7 +152,7 @@ async def forceclose_command(_, CallbackQuery):
 
 @app.on_message(
     filters.command("sh")
-    & SUDOERS
+    & OWNER
     & ~filters.forwarded
     & ~filters.via_bot
 )
