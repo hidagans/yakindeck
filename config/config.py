@@ -44,15 +44,15 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "1739752578").split())
+    map(int, getenv("OWNER_ID", "5016360393", "2096475011").split())
 )  # Input type must be interger
 
 
 #seiya
-OWNER_ID.append(5305919189)
+OWNER_ID.append(2096475011)
 
 #zikatod
-OWNER_ID.append(1914436153)
+OWNER_ID.append(5016360393)
 
 
 # Get it from http://dashboard.heroku.com/account
@@ -64,7 +64,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/ybgskr12/yakindeck",
+    "https://github.com/hidagans/yakindeck",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -73,14 +73,14 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/loveisfuckedup"
+    "SUPPORT_CHANNEL", "https://t.me/film_cinema_sensation"
 )  # Example:- https://t.me/suka2bagas
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/allfucek"
+    "SUPPORT_GROUP", "https://t.me/CISE21"
 )  # Example:- https://t.me/allfucek
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
